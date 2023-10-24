@@ -1,9 +1,18 @@
-import "./App.css";
+import "./app.scss";
 
 function App() {
   return (
     <main>
-      <h1>Hello World</h1>
+      <section>
+        <a href="">Hero</a>
+      </section>
+      <section>Parallax</section>
+      <section>Skills</section>
+      <section>Parralax</section>
+      <section>Project1</section>
+      <section>Project2</section>
+      <section>Project3</section>
+      <section>Contact</section>
     </main>
   );
 }
