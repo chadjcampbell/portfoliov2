@@ -1,10 +1,11 @@
 import "./app.scss";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
-    <main>
+    <div>
       <section>
-        <a href="">Hero</a>
+        <Navbar />
       </section>
       <section>Parallax</section>
       <section>Skills</section>
@@ -13,7 +14,7 @@ function App() {
       <section>Project2</section>
       <section>Project3</section>
       <section>Contact</section>
-    </main>
+    </div>
   );
 }
 
