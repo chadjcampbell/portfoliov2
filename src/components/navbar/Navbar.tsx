@@ -15,11 +15,22 @@ const Navbar = () => {
           Chad J Campbell
         </motion.span>
         <div className="social">
-          <a href="#">
-            <img src="/github.svg" alt="github icon" />
+          <a href="https://github.com/chadjcampbell" target="_blank">
+            <motion.img
+              src="/github.svg"
+              alt="github icon"
+              whileHover={{ scale: 1.1 }}
+            />
           </a>
-          <a href="#">
-            <img src="/linkedin.svg" alt="linkedin icon" />
+          <a
+            href="https://www.linkedin.com/in/chad-campbell-b6b59693/"
+            target="_blank"
+          >
+            <motion.img
+              src="/linkedin.svg"
+              alt="linkedin icon"
+              whileHover={{ scale: 1.1 }}
+            />
           </a>
         </div>
       </div>
