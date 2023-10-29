@@ -1,3 +1,4 @@
+import "./skills.scss";
 import { motion } from "framer-motion";
 
 const Skills = () => {
@@ -19,13 +20,40 @@ const Skills = () => {
         </div>
         <div className="title">
           <h3>
-            and <b>Framworks</b> for web development.
+            and <b>Frameworks</b> for web development.
           </h3>
           <a href="#Projects">What I've Built</a>
         </div>
       </motion.div>
       <motion.div className="listContainer">
-        <div className="box"></div>
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
+          <h4>Frontend</h4>
+          <p>icons/names here</p>
+        </motion.div>
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
+          <h4>Backend</h4>
+          <p>icons/names here</p>
+        </motion.div>
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
+          <h4>Databases</h4>
+          <p>icons/names here</p>
+        </motion.div>
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
+          <h4>The Rest</h4>
+          <p>icons/names here</p>
+        </motion.div>
       </motion.div>
     </motion.div>
   );
