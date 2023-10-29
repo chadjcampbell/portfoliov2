@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 const variants = {
   open: {
     transition: {
+      delayChildren: 0.5,
       staggerChildren: 0.1,
     },
   },
