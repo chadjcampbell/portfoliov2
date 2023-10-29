@@ -40,8 +40,11 @@
                 object-fit: cover;
             }
             h3 {
-                font-size: 60px;
+                font-size: 72px;
                 font-weight: 100;
+                b:hover{
+                    color:orange
+                }
             }
             a {
                 width: 300px;
@@ -56,6 +59,9 @@
                 color: #0c0c1d;
                 cursor: pointer;
             }
+            a:hover{
+                background-color: darkorange;
+            }
         }
 
     }
@@ -69,7 +75,7 @@
             padding: 50px;
             margin: 20px;
             border: 0.5px solid gray;
-            border-radius: 20px;
+            border-radius: 10px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
