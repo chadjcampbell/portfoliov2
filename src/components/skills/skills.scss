@@ -72,13 +72,21 @@
         max-width: 1366px;
 
         .box {
-            padding: 50px;
+            padding: 10px 50px;
             margin: 20px;
             border: 0.5px solid gray;
             border-radius: 10px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-around;
+            align-items: center;
+            .iconContainer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+            }
             .icon {
                 display: flex;
                 align-items: center;
