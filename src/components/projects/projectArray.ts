@@ -1,3 +1,12 @@
+export type ProjectType = {
+  id: string;
+  name: string;
+  code: string;
+  preview: string;
+  background: string;
+  description: string;
+};
+
 export const projectArray = [
   {
     id: "1",
