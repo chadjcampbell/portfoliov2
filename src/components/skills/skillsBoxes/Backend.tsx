@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const variants = {
   animate: {
     transition: {
-      delayChildren: 1,
+      delayChildren: 0.75,
       staggerChildren: 0.1,
     },
   },

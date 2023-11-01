@@ -1,7 +1,29 @@
+import { motion } from "framer-motion";
+
+const variants = {
+  animate: {
+    transition: {
+      delayChildren: 1.25,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  initial: {
+    y: 20,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 const TheRest = () => {
   return (
-    <div className="iconContainer">
-      <div className="icon">
+    <motion.div className="iconContainer" variants={variants}>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <path
             fill="#659AD3"
@@ -17,8 +39,8 @@ const TheRest = () => {
           ></path>
         </svg>
         <p>C</p>
-      </div>
-      <div className="icon">
+      </motion.div>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <path
             fill="#F34F29"
@@ -26,8 +48,8 @@ const TheRest = () => {
           ></path>
         </svg>
         <p>Git</p>
-      </div>
-      <div className="icon">
+      </motion.div>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <g fill="#ffffff">
             <path
@@ -39,8 +61,8 @@ const TheRest = () => {
           </g>
         </svg>
         <p>Github</p>
-      </div>
-      <div className="icon">
+      </motion.div>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <path
             d="M3.656 45.043s-3.027-2.191.61-5.113l8.468-7.594s2.426-2.559 4.989-.328l78.175 59.328v28.45s-.039 4.468-5.757 3.976zm0 0"
@@ -60,8 +82,8 @@ const TheRest = () => {
           ></path>
         </svg>
         <p>VS Code</p>
-      </div>
-      <div className="icon">
+      </motion.div>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <path
             fill="#99425B"
@@ -69,8 +91,8 @@ const TheRest = () => {
           ></path>
         </svg>
         <p>Jest</p>
-      </div>
-      <div className="icon">
+      </motion.div>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <path
             fill="#FFFF00"
@@ -81,8 +103,8 @@ const TheRest = () => {
         </svg>
 
         <p>Linux</p>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
