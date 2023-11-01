@@ -1,7 +1,29 @@
+import { motion } from "framer-motion";
+
+const variants = {
+  animate: {
+    transition: {
+      delayChildren: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  initial: {
+    y: 20,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 const Backend = () => {
   return (
-    <div className="iconContainer">
-      <div className="icon">
+    <motion.div className="iconContainer" variants={variants}>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path>
           <path
@@ -10,8 +32,8 @@ const Backend = () => {
           ></path>
         </svg>
         <p>Javascript</p>
-      </div>
-      <div className="icon">
+      </motion.div>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <path
             fill="#83CD29"
@@ -19,8 +41,8 @@ const Backend = () => {
           ></path>
         </svg>
         <p>Node</p>
-      </div>
-      <div className="icon">
+      </motion.div>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <path
             fill="#ffffff"
@@ -28,8 +50,8 @@ const Backend = () => {
           ></path>
         </svg>
         <p>Express</p>
-      </div>
-      <div className="icon">
+      </motion.div>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <linearGradient
             id="python-original-a"
@@ -83,8 +105,8 @@ const Backend = () => {
           ></path>
         </svg>
         <p>Python</p>
-      </div>
-      <div className="icon">
+      </motion.div>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <path
             fill="#ffffff"
@@ -92,8 +114,8 @@ const Backend = () => {
           ></path>
         </svg>
         <p>Flask</p>
-      </div>
-      <div className="icon">
+      </motion.div>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <g fill="#ffffff" fillRule="evenodd">
             <path
@@ -108,8 +130,8 @@ const Backend = () => {
           </g>
         </svg>
         <p>Socket.io</p>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

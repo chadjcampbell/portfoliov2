@@ -1,7 +1,29 @@
+import { motion } from "framer-motion";
+
+const variants = {
+  animate: {
+    transition: {
+      delayChildren: 0.5,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  initial: {
+    y: 20,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 const Frontend = () => {
   return (
-    <div className="iconContainer">
-      <div className="icon">
+    <motion.div className="iconContainer" variants={variants}>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <path
             fill="#E44D26"
@@ -21,8 +43,8 @@ const Frontend = () => {
           ></path>
         </svg>
         <p>HTML</p>
-      </div>
-      <div className="icon">
+      </motion.div>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <path
             fill="#1572B6"
@@ -50,8 +72,8 @@ const Frontend = () => {
           ></path>
         </svg>{" "}
         <p>CSS</p>
-      </div>
-      <div className="icon">
+      </motion.div>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <path
             d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0"
@@ -59,8 +81,8 @@ const Frontend = () => {
           ></path>
         </svg>
         <p>Tailwind</p>
-      </div>
-      <div className="icon">
+      </motion.div>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <path fill="#fff" d="M22.67 47h99.67v73.67H22.67z"></path>
           <path
@@ -70,8 +92,8 @@ const Frontend = () => {
           ></path>
         </svg>
         <p>Typescript</p>
-      </div>
-      <div className="icon">
+      </motion.div>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <g fill="#61DAFB">
             <circle cx="64" cy="64" r="11.4"></circle>
@@ -79,8 +101,8 @@ const Frontend = () => {
           </g>
         </svg>
         <p>React</p>
-      </div>
-      <div className="icon">
+      </motion.div>
+      <motion.div className="icon" variants={itemVariants}>
         <svg viewBox="0 0 128 128">
           <path fill="none" d="M0 0h128v128H0z"></path>
           <path
@@ -89,8 +111,8 @@ const Frontend = () => {
           ></path>
         </svg>
         <p>Redux (RTK)</p>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
