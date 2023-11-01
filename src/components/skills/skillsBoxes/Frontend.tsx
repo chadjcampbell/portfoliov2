@@ -1,5 +1,3 @@
-import "../skills.scss";
-
 const Frontend = () => {
   return (
     <div className="iconContainer">
