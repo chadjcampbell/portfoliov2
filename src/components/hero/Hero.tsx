@@ -31,9 +31,9 @@ const sliderVariants = {
   animate: {
     x: "-220%",
     transition: {
-      duration: 20,
       repeat: Infinity,
-      repeatType: "mirror",
+      repeatType: "reverse",
+      duration: 20,
     },
   },
 };
@@ -53,10 +53,36 @@ const Hero = () => {
             Full Stack Web Developer
           </motion.h1>
           <motion.div className="buttons" variants={textVariants}>
-            <motion.button variants={textVariants}>
+            <motion.a
+              href="#Projects"
+              style={{
+                background: "rgb(17, 17, 50)",
+                color: "rgb(255, 255, 255)",
+              }}
+              whileHover={{
+                background: "rgb(211, 211, 211, 1)",
+                color: "rgb(0, 0, 0)",
+                scale: 1.05,
+              }}
+              variants={textVariants}
+            >
               See the Latest Works
-            </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            </motion.a>
+            <motion.a
+              href="#Contact"
+              style={{
+                background: "rgb(17, 17, 50)",
+                color: "rgb(255, 255, 255)",
+              }}
+              whileHover={{
+                background: "rgb(211, 211, 211, 1)",
+                color: "rgb(0, 0, 0)",
+                scale: 1.05,
+              }}
+              variants={textVariants}
+            >
+              Contact Me
+            </motion.a>
           </motion.div>
           <motion.img
             src="/scroll.png"

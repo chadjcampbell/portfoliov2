@@ -23,7 +23,38 @@ const SingleProject = ({ project }: SingleProjectProps) => {
           <motion.div className="textContainer" style={{ y }}>
             <h3>{project.name}</h3>
             <p>{project.description}</p>
-            <button>See demo</button>
+            <div className="buttonContainer">
+              <motion.a
+                href={project.code}
+                target="_blank"
+                style={{
+                  background: "rgb(17, 17, 50)",
+                  color: "rgb(255, 255, 255)",
+                }}
+                whileHover={{
+                  background: "rgb(211, 211, 211, 1)",
+                  color: "rgb(0, 0, 0)",
+                  scale: 1.05,
+                }}
+              >
+                📑 View Code
+              </motion.a>
+              <motion.a
+                href={project.preview}
+                target="_blank"
+                style={{
+                  background: "rgb(17, 17, 50)",
+                  color: "rgb(255, 255, 255)",
+                }}
+                whileHover={{
+                  background: "rgb(211, 211, 211, 1)",
+                  color: "rgb(0, 0, 0)",
+                  scale: 1.05,
+                }}
+              >
+                🖥️ Live Demo
+              </motion.a>
+            </div>
           </motion.div>
         </div>
       </div>
