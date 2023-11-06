@@ -1,18 +1,20 @@
 import { motion, useInView } from "framer-motion";
 import "./contact.scss";
-import { useRef, useState } from "react";
+import { FormEvent, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 const variants = {
   initial: {
-    y: 300,
+    x: -300,
     opacity: 0,
   },
   animate: {
-    y: 0,
+    x: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
-      staggerChildren: 0.1,
+      duration: 1,
+      staggerChildren: 0.2,
     },
   },
 };
@@ -20,10 +22,33 @@ const variants = {
 export const Contact = () => {
   const ref = useRef(null);
   const formRef = useRef(null);
-  // const [error, setError] = useState(false);
-  // const [success, setSuccess] = useState(false);
 
   const isInView = useInView(ref, { margin: "-100px" });
+
+  const sendEmail = (e: FormEvent) => {
+    e.preventDefault();
+
+    formRef.current &&
+      emailjs
+        .sendForm(
+          "service_oz0fm1z",
+          "template_s472lyb",
+          formRef.current,
+          "HDt9p72ndSLywkXGK"
+        )
+        .then(
+          (result) => {
+            console.log(result);
+            toast.success("Message sent, thanks!");
+            const formTarget = e.target as HTMLFormElement;
+            formTarget.reset();
+          },
+          (error) => {
+            console.error(error);
+            toast.error("Something went wrong");
+          }
+        );
+  };
 
   return (
     <motion.div
@@ -31,7 +56,7 @@ export const Contact = () => {
       className="contact"
       variants={variants}
       initial="initial"
-      whileInView="animate"
+      animate={isInView && "animate"}
     >
       <motion.div className="textContainer" variants={variants}>
         <motion.h2 variants={variants}>Let's work together</motion.h2>
@@ -80,21 +105,21 @@ export const Contact = () => {
         </motion.div>
         <motion.form
           ref={formRef}
-          action=""
+          onSubmit={sendEmail}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
         >
           <input
             autoComplete="name"
-            name="name"
+            name="from_name"
             type="text"
             required
             placeholder="Name"
           />
           <input
             autoComplete="email"
-            name="email"
+            name="from_email"
             type="email"
             required
             placeholder="Email"

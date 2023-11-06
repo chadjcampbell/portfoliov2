@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import "./app.scss";
 import { Contact } from "./components/contact/Contact";
 import Hero from "./components/hero/Hero";
@@ -9,6 +10,7 @@ import Skills from "./components/skills/Skills";
 function App() {
   return (
     <div>
+      <Toaster />
       <section id="Home">
         <Navbar />
         <Hero />
