@@ -66,7 +66,7 @@ const Hero = () => {
               }}
               variants={textVariants}
             >
-              See the Latest Works
+              Latest Works
             </motion.a>
             <motion.a
               href="#Contact"
