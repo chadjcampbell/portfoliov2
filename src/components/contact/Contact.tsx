@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 
 const variants = {
   initial: {
-    x: -300,
+    x: -200,
     opacity: 0,
   },
   animate: {

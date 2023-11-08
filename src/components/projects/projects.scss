@@ -12,9 +12,7 @@
     color: orange;
     font-size: 36px;
     @include mobile {
-      top: unset;
-      bottom: 0;
-      font-size: 24px;
+      font-size: 20px;
     }
     .progressBar {
       height: 10px;
@@ -40,6 +38,7 @@
       gap: 50px;
       @include mobile {
         flex-direction: column;
+        margin-top: 50px;
       }
 
       .imgContainer {
@@ -48,7 +47,7 @@
         @include mobile {
           margin-top: 50px;
           width: 100%;
-          max-height: 300px;
+          max-height: 200px;
         }
 
         img {
