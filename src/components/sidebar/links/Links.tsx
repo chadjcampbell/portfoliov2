@@ -26,12 +26,17 @@ const itemVariants = {
   },
 };
 
-const Links = () => {
+type LinksProps = {
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const Links = ({ setOpen }: LinksProps) => {
   const items = ["Home", "Skills", "Projects", "Contact"];
   return (
     <motion.div className="links" variants={variants}>
       {items.map((item) => (
         <motion.a
+          onClick={() => setOpen((prev: boolean) => !prev)}
           href={`#${item}`}
           key={item}
           variants={itemVariants}
