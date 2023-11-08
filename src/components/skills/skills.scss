@@ -1,107 +1,128 @@
+@import "../../app.scss";
+
 .skills {
-    height: 100%;
-    background: linear-gradient(180deg, #0c0c1d,#111132);
+  height: 100%;
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .textContainer {
+    @include tablet {
+      display: none;
+    }
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    p {
+      font-weight: 200;
+      font-size: 20px;
+      color: gray;
+      text-align: right;
+    }
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.5px solid gray;
+    }
+  }
+  .titleContainer {
+    @include tablet {
+      display: none;
+    }
+    flex: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
-
-    .textContainer{
-        flex: 1;
-        align-self: flex-end;
+    align-items: center;
+    .title {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      img {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        object-fit: cover;
+      }
+      h3 {
+        font-size: 64px;
+        font-weight: 100;
+        b:hover {
+          color: orange;
+        }
+      }
+      a {
+        width: 300px;
+        height: 100px;
         display: flex;
         align-items: center;
-        gap: 20px;
-        p{
-            font-weight: 200;
-            font-size: 20px;
-            color: gray;
-            text-align: right;
-        }
-        hr{
-            width: 500px;
-            border: none;
-            border-top: 0.5px solid gray;
-        }
+        justify-content: center;
+        border-radius: 50px;
+        background-color: orange;
+        border: none;
+        font-size: 24px;
+        color: #0c0c1d;
+        cursor: pointer;
+      }
+      a:hover {
+        background-color: darkorange;
+      }
     }
-    .titleContainer{
-        flex: 2;
+  }
+  .listContainer {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 1366px;
+    div:nth-child(4) {
+      @include mobile {
+        display: none;
+      }
+    }
+    .box {
+      padding: 10px 50px;
+      margin: 20px;
+      border: 0.5px solid gray;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      min-width: 300px;
+      @include mobile {
+        margin: 5px;
+        padding: 5px;
+      }
+      h4 {
+        margin-bottom: 5px;
+      }
+      .iconContainer {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        .title{
-            display: flex;
-            gap: 50px;
-            align-items: center;
-            img{
-                width: 300px;
-                height: 100px;
-                border-radius: 50px;
-                object-fit: cover;
-            }
-            h3 {
-                font-size: 72px;
-                font-weight: 100;
-                b:hover{
-                    color:orange
-                }
-            }
-            a {
-                width: 300px;
-                height: 100px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 50px;
-                background-color: orange;
-                border: none;
-                font-size: 24px;
-                color: #0c0c1d;
-                cursor: pointer;
-            }
-            a:hover{
-                background-color: darkorange;
-            }
-        }
-
-    }
-    .listContainer{
-        flex: 2;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 5px;
+      }
+      .icon {
         display: flex;
-        margin: auto;
-        max-width: 1366px;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 20px;
+        border: white 1px solid;
+        border-radius: 50px;
 
-        .box {
-            padding: 10px 50px;
-            margin: 20px;
-            border: 0.5px solid gray;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            .iconContainer {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-                gap: 5px;
-            }
-            .icon {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 0px 20px;
-                border: white 1px solid;
-                border-radius: 50px;
-
-                svg {
-                    width: 20px;
-                }
-                p {
-                    margin: 5px;
-                }
-            }
+        svg {
+          width: 20px;
         }
+        p {
+          margin: 5px;
+        }
+      }
     }
+  }
 }

@@ -217,7 +217,7 @@ const Databases = () => {
         <p>Redis</p>
       </motion.div>
       <motion.div className="icon" variants={itemVariants}>
-        <p>Drizzle</p>
+        <p>Mongoose/Drizzle</p>
       </motion.div>
     </motion.div>
   );

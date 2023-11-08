@@ -42,6 +42,13 @@
       }
       .buttons {
         z-index: 1;
+        @include mobile {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 20px;
+        }
         a {
           padding: 20px;
           border: 1px solid white;
