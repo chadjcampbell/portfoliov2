@@ -27,9 +27,9 @@ const Parallax = ({ type }: ParallaxProps) => {
             : "linear-gradient(180deg,#111132,#505064)",
       }}
     >
-      <motion.h3 style={{ y: yText }}>
+      <motion.h2 style={{ y: yText }}>
         {type === "skills" ? "Tools in the toolbelt" : "My latest works"}
-      </motion.h3>
+      </motion.h2>
       <motion.div className="mountains"></motion.div>
       <motion.div
         style={{
